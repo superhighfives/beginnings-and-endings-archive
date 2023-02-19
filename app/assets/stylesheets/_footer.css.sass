@@ -1,0 +1,59 @@
+/*
+ * Beginnings & Endings
+ * Footer
+ */
+
+footer
+  width: 100%
+  padding-bottom: $layout-site-spacing
+
+  .wayfinder
+    background: lighten($color-black, 5%)
+
+    li
+      .ss-icon
+        color: $color-grey
+        float: left
+        padding-right: 10px
+      h3
+        @extend .capitals
+        color: $color-grey
+        padding-bottom: 10px
+        font-size: 0.8125em
+      p
+        font-size: 0.825em
+        padding-left: 10px
+        margin-left: 10px
+        border-left: 1px solid #999
+        font-style: italic
+        line-height: 1.5em
+
+  .links
+    +box-shadow(0 0 30px 0 rgba(#000, 0.5))
+    +box-sizing(border-box)
+    border-top: 1px solid lighten($color-black, 10%)
+    padding: 5px $layout-site-spacing / 4
+    background: $color-black
+    +clearfix
+    position: fixed
+    bottom: 0
+    left: 0
+    width: 100%
+    height: $layout-links-height
+    overflow: hidden
+    z-index: $z-index-foreground
+
+    a
+      font-family: $font-face-grotesque
+      text-transform: uppercase
+
+    .logo
+      padding-top: 8px
+
+    .social
+      padding-top: 5px
+      .twitter, .facebook
+        float: left
+      .facebook
+        overflow: hidden
+        margin-left: 10px

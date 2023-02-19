@@ -1,0 +1,52 @@
+.page.welcome
+  .wrapper
+    .title
+      %h2 Um, what is it?
+    :markdown
+      **Brightly** made an album, called **Beginnings&nbsp;<span class="ampersand">&amp;</span>&nbsp;Endings**. They wanted people to share it - to send it to their friends and family and high school crushes and former worst enemies.
+
+      When you join in, you get our new single **Preflight Nerves** and a unique code. If ten people sign up with your code, you get our album. Easy as that.
+
+      **And it's exponential, too.** So the further your code goes, the easier it is for everyone! Like a pyramid scheme, but without the bad bits.
+
+    .grid.thirds
+      .column
+        %img.circle{src: asset_path('welcome/im-welcome-step-1.png')}
+        %h3
+          %sup 1.
+          Join in
+        %p
+          Get our new
+          %br
+          single
+          %em Preflight Nerves
+      .column
+        %img.circle{src: asset_path('welcome/im-welcome-step-2.png')}
+        %h3
+          %sup 2.
+          Share
+        %p
+          Share your code and
+          %br
+          track where it ends up
+      .column.last
+        %img.circle{src: asset_path('welcome/im-welcome-step-3.png')}
+        %h3
+          %sup 3.
+          Win
+        %p
+          When ten people join
+          %br
+          you get the album free
+    :markdown
+      **You'll get a link** so you can keep track of your progress. From where you began, to where you ended, and how many billions of kilometers were inbetween.
+
+    .title
+      %h2
+        Ready to get started?
+    .center
+      %a.button.success{href: "/map/"}
+        View the map
+
+%footer
+  = render partial: "core/links"

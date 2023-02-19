@@ -1,0 +1,48 @@
+.page.overlay.help
+  .wrapper
+    .title
+      %h2 Um, help?!
+    :markdown
+      Do not panic. We are here to help!
+
+      If you have any issues just get in touch via [@wearebrightly](http://twitter.com/wearebrightly) or you should 100% [contact us](mailto:beginnings@wearebrightly.com) directly if you're grumpy.
+
+      In the meantime, we've put together a list of some possible questions.
+
+    .faq
+      .question
+        %h3
+          So, who made this?
+        :markdown
+          [Charlie](http://charliegleason.com). He's the lead singer, and when he's not doing [Brightly](http://wearebrightly.com) he is one-third of movie review site, [Goodfilms](http://goodfil.ms).
+
+      .question
+        %h3
+          Why did you make this?
+        :markdown
+          Because.
+
+      .question
+        %h3
+          My code isn't working!? Argh!
+        :markdown
+          That is not awesome. [Fire us an email](mailto:together@wearebrightly.com) and we'll sort it out for you as quickly as is humanly possible.
+
+      .question
+        %h3
+          I'm getting some dumb error about being out of internets, are you trying to be funny?
+        :markdown
+          We really were. Not to worry. We're using [Bandcamp](http://music.bandcamp.com) to power the downloads, and as they don't have an API we're doing some stuff manually. We'll fix it up and let you know on our Twitter [@wearebrightly](http://twitter.com/wearebrightly) when everything is back up and running.
+
+      .question
+        %h3
+          I'm from the press and I want to ask you some questions.
+        :markdown
+          Oooooh. Rad! You can email us at [together@wearebrightly.com](mailto:together@wearebrightly.com) if you'd like to chat.
+
+    .center.divider
+      %a.button.success{href: "/map"}
+        Jump back to the map
+
+%footer
+  = render partial: "core/links"

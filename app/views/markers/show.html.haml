@@ -1,0 +1,53 @@
+.page.overlay.thank-you
+  .wrapper
+    .title
+      %h2 Thank you!
+    :markdown
+      We're so amped you've joined in. **We've emailed you a link to download Preflight Nerves**. If for some reason it doesn't appear, check your junk mail, or [contact us](mailto:beginnings@wearebrightly.com) directly to fix it.
+
+      *Easy as!* Next up, give your friends you super sharable link below:
+
+    .code
+      %p
+        Voila!
+        %span.lowlight Your code!
+      %h3.highlight= @marker.code
+
+    :markdown
+      If *ten of your friends* join the **Beginnings&nbsp;<span class="ampersand">&amp;</span>&nbsp;Endings** project with your code the album is yours. It's our way of saying thanks for being the best human.
+
+    .social
+
+      .well
+        %h3
+          %span.ss-icon.ss-social &#xF610;
+          Share it on Facebook
+        %a.social-share.facebook{target: "_blank", href: "https://www.facebook.com/dialog/feed?app_id=255477521158048&link=#{u @share[:url]}&picture=#{u @share[:picture]}&name=#{u @share[:name]}&caption=#{u @share[:caption]}&description=#{u @share[:description]}&redirect_uri=#{u @share[:redirect_uri]}"}
+          %span.ss-icon.ss-social &#xF610;
+          Share your unique code on Facebook
+
+      .well
+        %h3
+          %span.ss-icon.ss-social &#xF611;
+          Share it on Twitter
+        %a.social-share.twitter{target: "_blank", href: "https://twitter.com/intent/tweet?url=#{u @share[:url]}&text=#{u @share[:tweet]}&related=#{u @share[:related]}"}
+          %span.ss-icon.ss-social &#xF611;
+          Share your unique code on Twitter
+
+      .well
+        %h3
+          %span.ss-icon &#x1F517;
+          Copy and paste a link
+        %a.email{target: "_blank", href: "http://beginnings.wearebrightly.com/join/#{@marker.code}"}
+          http://beginnings.wearebrightly.com/join/#{@marker.code}
+
+    :markdown
+      You can check back and see how far your code has travelled, and how many of your friends have gotten involved as well. *Sweet!*
+
+    .center.divider
+      %a.button.success{href: "/map/#{@marker.code}"}
+        View your point on the map
+        %span.classy (Zomg awesome!)
+
+%footer
+  = render partial: "core/links"

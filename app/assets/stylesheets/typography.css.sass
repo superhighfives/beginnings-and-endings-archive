@@ -1,0 +1,78 @@
+/*
+ * Beginnings & Endings
+ * Typography
+ */
+
+body 
+  color: $color-white
+  font-family: $font-face-georgia
+
+a
+  color: $site-color-highlight
+  text-decoration: none
+
+  &:hover
+    color: $color-white
+
+.super-small
+  font-size: 0.75em
+
+.small
+  font-size: 0.875em
+  line-height: 25px
+
+.medium
+  font-size: 1em
+
+.large
+  font-size: 1.5em
+
+.extra-large
+  font-size: 3em
+
+sup
+  font-size: 0.5em
+  vertical-align: top
+
+.capitals
+  text-transform: uppercase
+  color: $site-color-highlight
+  font-style: normal
+
+  .enter-code &
+    color: $color-black
+    @extend .super-small
+
+  .stats &
+    @extend .super-small
+
+.seperator
+  color: $site-color-highlight
+  @extend .super-small
+  padding: 0 10px
+
+.highlight
+  color: $site-color-highlight
+
+.lowlight
+  color: $site-color-lowlight
+
+p
+  @extend .small
+  padding-bottom: $layout-site-spacing / 2
+
+  &:last-of-type
+    padding-bottom: 0
+
+  em
+    font-style: italic
+    color: $site-color-lowlight
+
+  strong
+    font-style: italic
+    font-weight: normal
+    color: $site-color-highlight
+
+span.ampersand
+  font-family: $font-face-ampersand
+  font-style: italic

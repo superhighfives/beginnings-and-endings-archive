@@ -1,0 +1,51 @@
+@import "compass/reset"
+@import "variables"
+
+body
+  background: $site-color-highlight
+  width: 400px
+  margin: 0 auto
+  font-family: $font-face-georgia
+  color: darken($site-color-highlight, 35%)
+  padding-bottom: $layout-site-spacing * 2
+
+  h1
+    width: 400px
+    height: 350px
+    background: url(asset_path('ie/im-logo.gif', nil)) no-repeat
+    text-indent: -9999em
+
+    a
+      display: block
+      width: 100%
+      height: 100%
+
+  h2
+    margin: 0 0 $layout-site-spacing / 2
+    font-size: 1.5em
+    font-style: italic
+    color: $color-black
+    font-weight: normal
+
+  p
+    line-height: 1.5em
+    margin-bottom: $layout-site-spacing / 2
+
+  em
+    font-style: italic
+    color: $color-black
+
+  ul
+    width: 100%
+    padding-bottom: $layout-site-spacing
+    li
+      a
+        padding: $layout-site-spacing / 2 0
+        display: block
+        color: $color-black
+        border-bottom: 1px dashed darken($site-color-highlight, 15%)
+        text-decoration: none
+        text-transform: uppercase
+        font-size: 0.8125em
+        &:hover
+          border-bottom: 1px solid $color-black

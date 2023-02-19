@@ -1,0 +1,63 @@
+/*
+ * Symbolset
+ * www.symbolset.com
+ * Copyright © 2012 Oak Studios LLC
+ *
+ * Upload this file to your web server
+ * and place this within your <head> tags.
+ * <link href="webfonts/ss-standard.css" rel="stylesheet" />
+ */
+
+@font-face {
+  font-family: "SSStandard";
+  src: url('ss/ss-standard.eot');
+  src: url('ss/ss-staandard.eot?#iefix') format('embedded-opentype'),
+       url('ss/ss-standard.woff') format('woff'),
+       url('ss/ss-standard.ttf')  format('truetype'),
+       url('ss/ss-standard.svg#SSStandard') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ss-icon, .ss-icon.ss-standard {
+  font-family: "SSStandard";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: "SSSocial";
+  src: url('ss/ss-social.eot');
+  src: url('ss/ss-social.eot?#iefix') format('embedded-opentype'),
+       url('ss/ss-social.woff') format('woff'),
+       url('ss/ss-social.ttf')  format('truetype'),
+       url('ss/ss-social.svg#SSStandard') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ss-icon.ss-social{
+  font-family: "SSSocial";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}

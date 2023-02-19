@@ -1,0 +1,151 @@
+/*
+ * Beginnings & Endings
+ * Pages
+ */
+
+.pages
+  &.welcome
+    background: #000 url(asset_path('welcome/bg-welcome.jpg', nil)) no-repeat 100% $layout-header-height
+    background-size: cover
+
+.page
+  padding-bottom: $layout-site-spacing * 2
+  +box-sizing("border-box")
+  overflow: auto
+  p
+    a
+      border-bottom: 1px dashed $site-color-highlight
+      &:hover
+        border-bottom-color: $color-white
+
+  &.overlay, &.welcome
+    p
+      font-size: 1em
+      line-height: 1.75em
+
+  .social
+    margin: $layout-site-spacing / 2 0
+
+  .title
+    position: relative
+    text-align: center
+    margin: $layout-site-spacing 0 0
+    h2
+      font-size: 1.25em
+      font-style: italic
+      margin: $layout-site-spacing 0
+      padding: 0 10px
+      display: inline-block
+      text-align: center
+
+      &:before
+        content: ""
+        display: block
+        border-top: solid 1px rgba(#fff, 0.2)
+        width: 100%
+        height: 1px
+        position: absolute
+        top: 50%
+        left: 0
+        z-index: -1
+
+  .code
+    padding: $layout-site-spacing 0
+    margin-bottom: $layout-site-spacing / 2
+    text-align: center
+    font-style: italic
+    p
+      font-size: 1.25em
+    h3
+      font-size: 5em
+
+  .divider
+    border-top: solid 1px darken($color-white, 70%)
+    padding: $layout-site-spacing 0
+    margin: $layout-site-spacing 0
+
+  .wrapper
+    width: $layout-page-width
+
+.welcome
+  .infographic
+    margin-left: -($img-welcome-info-width - $layout-page-width) / 2
+    padding-bottom: $layout-site-spacing
+    display: relative
+    width: 635px
+    height: 132px
+  .grid
+    margin: $layout-site-spacing 0 $layout-site-spacing * 1.5
+    margin-left: -78px
+    width: 636px
+    .column
+      text-align: center
+      float: left
+      width: 180px
+      margin-right: 48px
+      &.last
+        margin-right: 0
+      img.circle
+        display: block
+        margin: 0 auto
+        width: 75px
+        height: 75px
+      h3
+        font-size: 1.25em
+        color: $site-color-highlight
+        font-style: italic
+        margin: $layout-site-spacing / 2 0 $layout-site-spacing / 4
+      p
+        color: $color-grey
+        line-height: 1.5em
+
+.help
+  h3
+    margin: $layout-site-spacing 0 $layout-site-spacing / 4
+    font-style: italic
+    font-size: 1.25em
+    line-height: 1.5em
+    color: $site-color-highlight
+  .faq
+    .question
+      padding-left: $layout-site-spacing / 2
+      border-left: 5px solid $site-color-highlight
+
+.thank-you
+  .well
+    padding: $layout-site-spacing / 2
+    border-left: 5px solid $site-color-highlight
+    background: darken($site-color-highlight, 52%)
+    text-align: center
+    h3
+      .ss-icon
+        padding-right: 5px
+        font-size: 0.9125em
+      color: $site-color-highlight
+      text-transform: uppercase
+      margin-bottom: $layout-site-spacing / 2
+      font-size: 0.8125em
+    margin-bottom: $layout-site-spacing
+    a
+      font-size:  0.9125em
+      text-align: center
+      color: $color-grey
+      font-family: $font-face-monospace
+      font-style: normal
+    .social-share
+      display: block
+      padding: $layout-site-spacing / 4
+      +border-radius(5px)
+      +box-shadow(0 0 5px 0 rgba($color-black, 0.25))
+      font-family: $font-face-helvetica
+      color: $color-white
+      &.facebook
+        background: #3b5998
+        &:hover
+          background: lighten(#3b5998, 10%)
+      &.twitter
+        background: #00A0D1
+        &:hover
+          background: lighten(#00A0D1, 10%)
+      +transition-property(background)
+      +transition-duration(0.3s)

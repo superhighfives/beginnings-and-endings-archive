@@ -1,0 +1,10 @@
+@font-face {
+    font-family: BaskervilleItalic;
+    src: url("baskerville/baskerville-italic.eot");
+    src: url("baskerville/baskerville-italic.eot?#iefix") format("embedded-opentype"),
+         url("baskerville/baskerville-italic.woff") format("woff"),
+         url("baskerville/baskerville-italic.ttf") format("truetype"),
+         url("baskerville/baskerville-italic.svg#BaskervilleItalic") format("svg");
+    font-weight: normal;
+    font-style: italic;
+}

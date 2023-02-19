@@ -1,0 +1,32 @@
+.map-holder
+  .loading(ng-show="!markers")
+  #leaflet(location)
+  #map
+    .status(ng-show="haveMarkers()" ng-cloak)
+      {{ currentMarkerIndex + 1 }}
+      %span.capitals of
+      {{markers.length}}
+    .detail-wrapper
+      .panel(ng-show='haveMarkers()' ng-cloak)
+        %ul.column
+          %li
+            .ss-icon &#xE6D0;
+            .detail
+              %strong {{currentMarker.location}}
+          %li
+            .ss-icon &#x1F465;
+            .detail {{currentMarker.participants}}
+          %li
+            .ss-icon &#xE350;
+            .detail
+              {{currentMarker.distance | formatDistance}}
+              %sup km
+              travelled
+          %li
+            .ss-icon &#x23F2;
+            .detail {{currentMarker.relative_time}}
+      %a.nav.ss-icon.previous(href='' ng-click='previous()' ng-show='haveMarkers()' ng-cloak) &#x25C5;
+      %a.nav.ss-icon.next(href='' ng-click='next()' ng-show='haveMarkers()' ng-cloak) &#x25BB;
+  #visualisation(visualisation)
+    .hovered-point(href='' ng-show="hoveredPoint" ng-style="hoveredPoint.style" ng-class="hoveredPoint.class" ng-cloak)
+      {{hoveredPoint.marker.location}}

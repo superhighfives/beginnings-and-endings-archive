@@ -1,0 +1,66 @@
+.page.overlay.join(ng-app="map" ng-controller="Location")
+  = render partial: "core/location"
+  .wrapper(ng-cloak)
+    .title
+      %h2 Join the project
+
+    %p
+      To join
+      %span.lowlight Beginnings & Endings,
+      and to get your free download of
+      %em.highlight Preflight Nerves,
+      we just need a couple of details.
+    %p
+      Don’t worry, we’ll never ever spam you.
+
+    = form_for(@marker, url: "/join", html: {method: "post", class: "form-join"}) do |f|
+      - unless params[:code].blank?
+        .note
+          %h3
+            %strong Rad!
+            You're using the code
+            = succeed '.' do
+              %em= params[:code]
+      - if @marker.errors.any?
+        .errors
+          %h2
+            Looks like we've found
+            = pluralize(@marker.errors.count, "problem")
+            that needs to be fixed
+
+          %ul
+            - @marker.errors.full_messages.each do |msg|
+              %li= msg
+
+      %fieldset
+        %legend The important bits
+        .field
+          = f.label :location
+          = f.text_field :location, :value => "{{ location.name }}"
+          .status(ng-show="location")
+            .latlon
+              Latitude
+              %span.latitude {{ location.latitude | toLatlon }}
+              Longitude
+              %span.longitude {{ location.longitude | toLatlon }}
+            %span.success Location found!
+        .field
+          = f.label :email
+          = f.text_field :email
+        .field.mailing-list
+          = f.label :is_subscriber do
+            = f.check_box :is_subscriber
+            %p Join our super infrequent mailing list?
+
+        = f.hidden_field :latitude, :value => "{{ location.latitude }}"
+        = f.hidden_field :longitude, :value => "{{ location.longitude }}"
+        = f.hidden_field :referrer_code, :value => params[:code]
+
+        .center.divider
+          %a.button.outline.pull-left{href: "/map"} Cancel
+          %input.button.success.pull-right(name="commit" type="submit" value="Join In" ng-show="location")/
+
+%footer
+  = render partial: "core/links"
+
+%script{:src => "http://maps.google.com/maps/api/js?sensor=false&libraries=geocoder&language=en-AU"}

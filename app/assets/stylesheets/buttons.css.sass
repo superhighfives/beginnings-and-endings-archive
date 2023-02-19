@@ -1,0 +1,37 @@
+.button
+  padding: 10px 20px
+  text-transform: uppercase
+  +background(linear-gradient(top, lighten($color-black, 20%), $color-black))
+  +border-radius(5px)
+  display: inline-block
+  text-align: center
+  font-family: $font-face-helvetica
+  font-weight: bold
+  font-size: $font-size-button
+  +transition
+
+  &:hover
+    +box-shadow(0 0 20px 0 rgba($color-white, 0.5))
+
+  &.success
+    color: $color-black
+    background: $site-color-highlight
+    +background(linear-gradient(top, lighten($site-color-highlight, 20%), $site-color-highlight))
+
+    &:hover
+      +box-shadow(0 0 20px 0 rgba($site-color-highlight, 1))
+
+  &.outline
+    background: none
+    border: 1px solid $site-color-highlight
+
+  .classy
+    font-family: $font-face-georgia
+    font-style: italic
+    text-transform: none
+    font-weight: normal
+    font-size: 1.125em
+
+input.button
+  cursor: pointer
+  border: none

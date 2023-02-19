@@ -1,0 +1,63 @@
+
+/*
+ * Beginnings & Endings
+ * Header
+ */
+
+header
+  height: $layout-header-height
+  background: $site-color-highlight
+  color: $color-black
+  position: relative
+  text-align: center
+  width: 100%
+
+  h1
+    display: inline-block
+    position: relative
+    top: 90px
+    text-align: center
+
+    span.line
+      display: block
+
+    span.bookend
+      font-family: $font-face-georgia
+      font-style: normal
+      text-transform: lowercase
+      font-style: italic
+      font-size: $font-size-logo-bookends
+      padding-bottom: 10px
+      border-bottom: 1px solid $color-yellow-subtle
+      position: absolute
+      top: 12px
+      display: block
+
+      &:first-child
+        left: -2em
+
+      &:last-child
+        right: -3.75em
+
+    a
+      display: block
+      width: 100%
+      height: 100%
+      color: $color-black
+      font-size: $font-size-logo
+      font-family: $font-face-grotesque
+      text-decoration: noneesque
+      text-transform: uppercase
+
+      &:hover
+        color: $color-black
+
+  a.ss-icon
+    color: $color-black
+    &:hover
+      +text-shadow(rgba($color-black, 0.25) 0 0 5px)
+
+  .help
+    position: absolute
+    bottom: 12px
+    right: 12px

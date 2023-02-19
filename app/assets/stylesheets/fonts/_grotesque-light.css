@@ -1,0 +1,10 @@
+@font-face {
+    font-family: GrotesqueLight;
+    src: url("grotesque/grotesque-light.eot");
+    src: url("grotesque/grotesque-light.eot?#iefix") format("embedded-opentype"),
+         url("grotesque/grotesque-light.woff") format("woff"),
+         url("grotesque/grotesque-light.ttf") format("truetype"),
+         url("grotesque/grotesque-light.svg#GrotesqueMTStdLight") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}

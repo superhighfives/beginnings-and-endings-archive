@@ -1,0 +1,21 @@
+%ul.stats.padded
+  %li.participants
+    %span.stat(ng-cloak)
+      {{ statistics.total_users }}
+    %span.capitals
+      participants
+    %span.seperator
+      &#8226;
+  %li.distance
+    %span.stat(ng-cloak)
+      {{ statistics.total_distance | formatDistance }}
+    %sup> km
+    %span.capitals
+      travelled
+    %span.seperator
+      &#8226;
+  %li.exchanges
+    %span.stat(ng-cloak)
+      {{ statistics.average_exchanges | formatDecimal }}
+    %span.capitals
+      exchanges averaged

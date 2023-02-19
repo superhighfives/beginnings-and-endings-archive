@@ -1,0 +1,9 @@
+.enter-code
+  %form{action: "/join/", method: "get", class: "form-enter-code"}
+    %label{for: ""}
+      %span.capitals Got a code?
+      %span.copy
+        Enter it here!
+    .code
+      %input#code.text{name: "code", type: "text", maxlength: "6"}
+      %button.ss-icon.next{href: "#"} &#x25BB;

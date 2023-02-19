@@ -1,0 +1,125 @@
+input.text
+  border: 1px solid $color-black
+  padding: 10px
+  outline-color: darken($site-color-highlight, 20%)
+  color: $site-color-highlight
+  font-family: $font-face-georgia
+  +box-sizing('border-box')
+
+* html .ui-autocomplete
+  width: 1px
+
+ul.ui-autocomplete
+  max-width: 318px
+  position: absolute
+  top: 0
+  cursor: default
+  border-left: 1px solid $color-grey
+  border-right: 1px solid $color-grey
+  border-top: 1px solid $color-grey
+  +border-radius(0 0 5px 5px)
+  +box-shadow(0 0 5px 0 rgba($color-black, 1))
+  li
+    width: 100%
+    background: darken($color-white, 10%)
+    border-bottom: 1px solid $color-grey
+    &:last-child
+      +border-radius(0 0 4px 4px)
+    a
+      font-style: italic
+      color: $color-black
+      text-decoration: none
+      display: block
+      padding: 2px .4em
+      line-height: 1.5
+      zoom: 1
+      font-weight: normal
+      cursor: pointer
+      &:hover, &.ui-state-active, &.ui-state-focus
+        background: $color-grey
+
+form.form-join
+  position: relative
+  padding-top: 40px
+  .ui-helper-hidden-accessible
+    text-indent: -9999em
+    display: block
+  legend
+    padding: 0 0 20px 160px
+    color: $site-color-highlight
+  .field
+    @extend .clearfix
+    position: relative
+    padding: 10px 0
+    label
+      line-height: 3.5em
+      padding-right: 20px
+      text-transform: uppercase
+      color: $site-color-lowlight
+      font-size: 0.75em
+      width: 140px
+      text-align: right
+      display: block
+      float: left
+    input[type=text]
+      float: left
+      padding: 10px
+      font-family: $font-face-georgia
+      font-style: italic
+      font-size: 1em
+      width: 296px
+    .latlon
+      padding-left: 160px
+      line-height: 2em
+      font-size: 0.8125em
+      color: $site-color-lowlight
+      font-style: italic
+      .latitude, .longitude
+        padding: 0 10px 0 5px
+    .success
+      padding: 8px
+      background: $color-green
+      +background(linear-gradient(top, $color-green, darken($color-green, 20%)))
+      font-size: 0.8125em
+      font-style: italic
+      position: absolute
+      top: 20px
+      right: -50px
+      +box-shadow(0 0 15px 0 rgba($color-black, 0.5))
+    &.mailing-list
+      label
+        text-transform: none
+        font-style: italic
+        font-size: 1em
+        padding-left: 160px
+        float: none
+        width: 100%
+        text-align: left
+        input
+          margin: 5px 5px 0 0
+          float: left
+
+.errors, .note
+  background: #222
+  padding: $layout-site-spacing
+  margin-bottom: $layout-site-spacing
+  font-size: 0.875em
+  h2, h3
+    color: $site-color-highlight
+  h2
+    padding-bottom: 20px
+    margin-bottom: 20px
+    color: $site-color-highlight
+    border-bottom: 1px solid rgba(#fff, 0.2)
+  h3
+    text-align: center
+    em
+      font-style: italic
+    strong
+      font-weight: bold
+  ul
+    li
+      padding: 5px 0
+
+.note
+  font-size: 1.5em
